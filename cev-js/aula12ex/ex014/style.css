@@ -2,27 +2,31 @@
 
 body {
     height: 100vh;
-    font-weight: normal;
-    font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(70, 142, 236);
-    color: white;
+    font: normal 1em Arial;
 }
 
 header {
     text-align: center;
+    color: white;
 }
 
 section {
+    width: 500px;
     background-color: white;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
-    margin: auto;
     border-radius: .6em;
-    height: 300px;
-    width: 500px;
+    padding: 1em;
+    margin: auto;
+}
+
+div {
+    text-align: center;
+    padding: .5em;
 }
 
 footer {
     text-align: center;
     font-style: Italic;
+    color: white;
 }
