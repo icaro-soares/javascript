@@ -20,12 +20,11 @@ header {
 
 section {
     background-color: white;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
-    margin: auto;
-    padding: 1em;
     border-radius: .6em;
-    height: 400px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+    padding: 1em;
     width: 500px;
+    margin: auto;
 }
 
 footer {
