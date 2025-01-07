@@ -2,44 +2,48 @@ function verificar() {
     var data = new Date()
     var atual = data.getFullYear()
     var nasc = document.getElementById('txtano')
-    var rad = document.getElementsByName('radsex')
-    var res = document.getElementById('res')
 
-    if (nasc.value > atual || nasc.value <= 0) {
-        alert('Dados incorretos, verifique novamente')
+    if (nasc.value.length == 0 || nasc.value > atual || nasc.value <= 0) {
+        alert('Verifique os dados novamente')
     } else {
-        var anoNasc = Number(nasc.value)
-        var genero = ''
-        var idade = atual - anoNasc
+        var idade = atual - Number(nasc.value)
+        var sexo = document.getElementsByName('radsex')
+        var gênero = ''
         var img = document.createElement('img')
-        if (rad[0].checked) {
-            genero = 'homem'
-            res.innerText = `Detectamos um ${genero} com ${idade} anos`
-            if (idade >= 0 && idade < 6) {
-                //Bebê
-            } else if (idade < 12) {
-                //Criança
-            } else if (idade < 25) {
-                //Jovem
+        var res = document.getElementById('res')
+
+        img.setAttribute('id', 'img')
+
+        if (sexo[0].checked) {
+            gênero = 'masculino'
+            if (idade >= 0 && idade < 4) {
+                img.src = 'bebe-h-pq.png'
+            } else if (idade < 9) {
+                img.src = 'crianca-h-pq.png'
+            } else if (idade < 29) {
+                img.src = 'jovem-h-pq.png'
             } else if (idade < 49) {
-                //Adulto
+                img.src = 'adulto-h-pq.png'
             } else {
-                //Idoso
+                img.src = 'idoso-h-pq.png'
             }
-        } else if (rad[1].checked) {
-            genero = 'mulher'
-            res.innerText = `Detectamos uma ${genero} com ${idade} anos`
-            if (idade >= 0 && idade < 6) {
-                //Bebê
-            } else if (idade < 12) {
-                //Criança
-            } else if (idade < 25) {
-                //Jovem
+        } else if (sexo[1].checked) {
+            gênero = 'feminino'
+            if (idade >= 0 && idade < 4) {
+                img.src = 'bebe-m-pq.png'
+            } else if (idade < 9) {
+                img.src = 'crianca-m-pq.png'
+            } else if (idade < 29) {
+                img.src = 'jovem-m-pq.png'
             } else if (idade < 49) {
-                //Adulto
+                img.src = 'adulto-m-pq.png'
             } else {
-                //Idoso
+                img.src = 'idoso-m-pq.png'
             }
         }
+
+        res.innerText = `Você é do sexo ${gênero} e tem ${idade} anos`
+        res.appendChild(img)
+        res.style.textAlign = 'center'
     }
 }
