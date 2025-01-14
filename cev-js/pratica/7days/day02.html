@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day02</title>
+    <style>
+        * {
+            font: normal 1em Arial;
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>#7DaysOfCode</h1>
+    </header>
+    <main>
+        <div id="res">
+            
+        </div>
+    </main>
+    <script>
+        let nome = prompt('Qual seu nome?')
+        let idade = prompt('Quantos anos você tem?')
+        let cidade = prompt('Qual cidade você nasceu?')
+        let ling = prompt('Qual linguagem de programação você está estudando?')
+        let res = document.getElementById('res')
+
+        let resp = prompt(`Você gosta de estudar ${ling} [1 -> Sim/2 -> Não]`)
+        
+        
+        res.innerHTML = `Olá ${nome}, você é de ${cidade}, têm ${idade} anos e está estudando ${ling}.<br>`
+        if (resp == 1 /*Sim*/) {
+            res.innerHTML += `Que maravilha! Continue estudando e você terá muito sucesso em sua carreira.`
+        } else if(resp == 2 /*Não*/) {
+            res.innerHTML += `Ahh que pena... Não desista, continue tentando. E você já tentou aprender outras linguagens?`
+        }
+        res.style.textAlign = 'center'
+    </script>
+</body>
+</html>
