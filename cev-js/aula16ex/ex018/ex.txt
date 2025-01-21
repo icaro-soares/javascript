@@ -1,8 +1,0 @@
-1. Total de elementos cadastrados;
-2. O maior valor adicionado;
-3. O menor valor adicionado;
-4. A soma de todos os valores;
-5. A média de todos os valores;
-6. Os dados devem ser preenchidos, 
-não podem haver repetições, 
-não pode ser maior que 100 e nem menor que 1;
