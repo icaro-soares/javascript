@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex008</title>
+</head>
+<body>
+    <main>
+        <h1>Velocidade do veículo</h1>
+        <p>
+            Qual a velocidade de seu veículo:
+            <input type="number" name="txtvel" id="txtvel">
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+        <p id="res"></p>
+        <script>
+            function verificar() {
+                var tvel = document.getElementById('txtvel')
+                var vel = Number(tvel.value)
+                var res = document.getElementById('res')
+                if (vel > 60) {
+                    res.innerHTML = `Você ultrapassou o limite de velocidade e foi <strong>MULTADO(A)</strong>`
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>

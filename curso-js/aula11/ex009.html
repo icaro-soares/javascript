@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <main>
+        <h1>Verifique sua nacionalidade</h1>
+        <p>
+            Que país você nasceu: 
+            <input type="text" name="br" id="br">
+            <input type="button" value="Analisar" onclick="analisar()">
+        </p>
+        <p id="res"></p>
+    </main>
+    <script>
+        function analisar() {
+            var país = document.getElementById('br')
+            var brasil = String(país)
+            var res = document.getElementById('res')
+            if (brasil == 'brasil') {
+                res.innerHTML = `Você é BRASILEIRO(A)`
+            }
+        }
+    </script>
+</body>
+</html>
