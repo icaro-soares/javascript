@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício002</title>
+</head>
+<style>
+    body {
+        font: normal 1em Arial;
+    }
+    h1 {
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Salário</h1>
+    <script>
+        let nome = prompt('Digite seu nome: ')
+        let sal = prompt('Quanto você ganha? ')
+        let sal_br = sal.toLocaleString('pt-BR')
+        document.write(`Seja muito bem vindo(a) ${nome}! <br>`)
+        document.write(`Você ganha ${sal_br}`)
+    </script>
+</body>
+</html>
